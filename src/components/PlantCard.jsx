@@ -13,14 +13,11 @@ function PlantCard({ plant }) {
 
       <h4>{plant.name}</h4>
 
-      <p>Price: ${plant.price}</p>
+     <p>Price: {plant.price}</p>
 
-      <button
-        className={soldOut ? "primary" : ""}
-        onClick={handleSoldOut}
-      >
-        {soldOut ? "Sold Out" : "In Stock"}
-      </button>
+<button className={plant.inStock ? "" : "primary"}>
+  {plant.inStock ? "In Stock" : "Out of Stock"}
+</button> 
     </li>
   );
 }
